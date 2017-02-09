@@ -2,8 +2,9 @@ module Application
   class Parser::Document::Loader
 
     class << self
-      def find_one(name)
-        [file = Parser::Document.new(name)]
+      def find_by_name(name)
+        path_to_file = File.join(ROOT_DIR, DEFAULT_FILE_DIR, name)
+        [Parser::Document.new(path_to_file)]
       end
 
       def load_all

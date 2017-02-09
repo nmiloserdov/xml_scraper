@@ -16,7 +16,7 @@ module Application
 
     def load_file_or_files
       if file_name
-        file_loader.find_by_name(name)
+        file_loader.find_by_name(file_name)
       else
         file_loader.load_all
       end
